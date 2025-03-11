@@ -1,0 +1,61 @@
+@import "../../assets/styles/setup/setup";
+
+$favorite-modal-semi-header-color: #9f9f9f;
+
+.favorite-modal-main-container {
+  max-height: 650px;
+  overflow: auto;
+  padding-bottom: 20px;
+}
+.favorite-modal-header-container {
+  padding-inline-start: 4px;
+  margin-bottom: 20px;
+}
+
+.favorite-modal-header {
+  font-size: rem(28px);
+  text-transform: capitalize;
+  padding-bottom: 10px;
+}
+
+.favorite-modal-semi-header {
+  color: $favorite-modal-semi-header-color;
+}
+
+.favorite-modal-empty-container {
+  width: 1210px;
+  height: 644px;
+}
+
+.favorite-modal-text-field {
+  .MuiInputBase-root.MuiOutlinedInput-root {
+    &.Mui-focused {
+      fieldset {
+        border-color: $clr6;
+      }
+    }
+  }
+}
+
+.favorite-modal-text-field-progress {
+  &.hide {
+    opacity: 0 !important;
+  }
+
+  &.show {
+    opacity: 1 !important;
+    color: $clr6;
+  }
+}
+
+.favorite-modal-products-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 30px;
+}
+
+.favorite-modal-no-products-container {
+  padding-inline-start: 5px;
+  height: 460px;
+  font-size: rem(24px);
+}

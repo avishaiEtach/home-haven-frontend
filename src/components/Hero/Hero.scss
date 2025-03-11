@@ -1,0 +1,67 @@
+@import "../../assets/styles/setup/setup";
+
+$hero-container-background-color: #fff3e3;
+
+.hero {
+  background: url(../../assets/images/hero-image.jpg) no-repeat center;
+  background-size: cover;
+  min-height: 700px;
+  overflow: hidden;
+}
+
+.hero-box {
+  position: relative;
+}
+
+.hero-container {
+  width: 48%;
+  min-height: 440px;
+  background-color: $hero-container-background-color;
+  position: absolute;
+  right: 0;
+  top: 150px;
+  padding: 60px 40px 40px 40px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  h1 {
+    font-family: Poppins-Bold;
+    color: $clr6;
+    font-size: rem(52px);
+    line-height: 1.25;
+    &:last-of-type {
+      margin-bottom: 17px;
+    }
+  }
+  p {
+    &:last-of-type {
+      flex: 1;
+    }
+  }
+  @media screen and(max-width: $small-desktop-breakpoint) {
+    top: 60px;
+  }
+  @media screen and(max-width: $tablet-breakpoint) {
+    width: 100%;
+    top: 60px;
+    padding: 60px 20px 40px 20px;
+    h1 {
+      font-size: rem(44px);
+    }
+    p {
+      &:last-of-type {
+        margin-bottom: 20px;
+      }
+      &:first-of-type {
+        margin-bottom: 8px;
+      }
+    }
+  }
+}
+
+.hero-button {
+  &.MuiButtonBase-root {
+    border-radius: 0;
+    padding: 25px 72px;
+  }
+}

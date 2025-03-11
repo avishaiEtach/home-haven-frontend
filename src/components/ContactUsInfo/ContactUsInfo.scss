@@ -1,0 +1,24 @@
+@import "../../assets/styles/setup/setup";
+
+.contact-us-info-section {
+  flex: 0.3;
+  padding: 30px 40px;
+  @media screen and(max-width: $tablet-breakpoint) {
+    flex: 1;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+}
+
+.contact-us-info-item {
+  display: flex;
+  gap: 20px;
+  &:not(:last-of-type) {
+    margin-bottom: 20px;
+  }
+}
+
+.contact-us-info-title {
+  font-size: rem(20px);
+  margin-bottom: 5px;
+}

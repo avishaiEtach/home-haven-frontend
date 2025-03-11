@@ -1,0 +1,81 @@
+@import "../../assets/styles/setup/setup";
+
+.about-us-team-cards-container {
+  gap: 30px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 250px);
+  justify-content: center;
+  margin-bottom: 70px;
+  @media screen and(min-width: $large-desktop-breakpoint) {
+    display: flex;
+    justify-content: center;
+    & > * {
+      flex-basis: 25%;
+    }
+  }
+}
+
+.about-us-team-cards-header {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: rem(42px);
+}
+
+.team-card-container {
+  border-radius: 5px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  &:hover {
+    .team-card-name {
+      color: $clr6;
+    }
+  }
+}
+
+.team-card-image {
+  flex: 0.7;
+  background-image: url(../../assets/images/businessMan2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 20px;
+  @media screen and(max-width: $small-desktop-breakpoint) {
+    min-height: 250px;
+    background-position: center;
+    background-size: contain;
+  }
+}
+.team-card-details {
+  flex: 0.3;
+  text-align: center;
+  padding: 20px;
+}
+
+.team-card-job-title {
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.team-card-name {
+  font-size: rem(28px);
+  margin-bottom: 25px;
+  transition: color 0.4s;
+}
+
+.team-card-icons-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  font-size: rem(22px);
+  & > * {
+    transition: 0.4s;
+    cursor: pointer;
+    &:hover {
+      color: $clr6;
+    }
+  }
+}

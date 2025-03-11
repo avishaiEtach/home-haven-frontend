@@ -1,0 +1,48 @@
+@import "../../assets/styles/setup/setup";
+
+.product-review-card {
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+  padding-block: 30px;
+  &:last-of-type {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  }
+  @media screen and(max-width: $mobile-breakpoint) {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+.product-review-card-image-container {
+  width: 80px;
+  height: 80px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  border-radius: 5px;
+  img {
+    object-fit: contain;
+    height: 100%;
+    border-radius: 5px;
+  }
+}
+
+.product-review-card-user-name {
+  font-size: rem(18px);
+  width: max-content;
+}
+
+.product-review-card-star-rating {
+  margin-inline-end: 10px;
+  .rating-star {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+.product-review-card-time {
+  font-size: rem(14px);
+  padding-bottom: 5px;
+}
+
+.product-review-card-comment {
+  padding-inline-start: 4px;
+}

@@ -1,0 +1,43 @@
+.container {
+  @include dynamic-width(1300px, rem(50px));
+  margin-inline: auto;
+  @media screen and(max-width: $mobile-breakpoint) {
+    @include dynamic-width(1300px, rem($mobile-padding));
+  }
+}
+
+$modal-close-button-hover-background-color: #f9f1e7;
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: $clr3;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  max-height: 900px;
+  max-width: 860px;
+  &:focus-visible {
+    border: 0;
+    outline: 0;
+  }
+  @media screen and(max-width: $tablet-breakpoint) {
+    max-height: 650px;
+    width: 90%;
+  }
+  @media screen and(max-height: 800px) and (min-width: $small-desktop-breakpoint) {
+    max-height: 500px;
+  }
+}
+
+.modal-close-button {
+  align-self: flex-end;
+  &.MuiIconButton-root {
+    &:hover {
+      background-color: $modal-close-button-hover-background-color;
+    }
+  }
+}

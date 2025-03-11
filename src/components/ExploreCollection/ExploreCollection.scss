@@ -1,0 +1,50 @@
+@import "../../assets/styles/setup/setup";
+.explore-collection-container {
+  display: flex;
+  flex-direction: column;
+  gap: 63px;
+  @media screen and(max-width: $mobile-breakpoint) {
+    padding-inline: $mobile-padding;
+  }
+}
+
+.explore-collection-header-container {
+  text-align: center;
+  h2 {
+    font-size: rem(32px);
+    margin-bottom: 0.5rem;
+  }
+  p {
+    font-size: rem(20px);
+    color: $clr5;
+  }
+}
+
+.explore-collection-cards-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  @media screen and(max-width: $tablet-breakpoint) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.explore-collection-card {
+  width: 100%;
+  min-height: 480px;
+  border-radius: 10px;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.explore-collection-card-label {
+  font-size: rem(24px);
+  font-family: Poppins-SemiBold;
+  text-align: center;
+  text-transform: capitalize;
+}

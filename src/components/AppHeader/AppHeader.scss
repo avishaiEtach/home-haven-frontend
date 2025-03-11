@@ -1,0 +1,86 @@
+@import "../../assets/styles/setup/setup";
+
+header {
+  box-shadow: 0 4px 12px rgba(6, 17, 118, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: $clr3;
+}
+
+.header {
+  padding-block: 15px;
+  @media screen and(max-width: $small-desktop-breakpoint) {
+    .login-icon,
+    .search-icon {
+      display: none;
+    }
+  }
+}
+
+.header-background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: $clr3;
+  box-shadow: 0 0 0 100vmax $clr3;
+  clip-path: inset(0 -100vmax);
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.logo-container {
+  width: 32px;
+  margin-inline-end: 7px;
+}
+
+.logo-text {
+  font-family: Montserrat-Bold;
+  font-size: rem(32px);
+  padding-top: 10px;
+  @media screen and(max-width: $small-desktop-breakpoint) {
+    font-size: rem(19px);
+  }
+}
+
+.header-navbar {
+  padding-top: 10px;
+  text-transform: capitalize;
+  font-family: Poppins-Medium;
+  gap: 75px;
+  li {
+    transition: 0.4s;
+    a {
+      text-decoration: none;
+      text-transform: none;
+      color: inherit;
+      &.active {
+        color: $clr6;
+      }
+    }
+    &:hover {
+      color: $clr6;
+    }
+  }
+  @media screen and(max-width: $small-desktop-breakpoint) {
+    display: none !important;
+  }
+  @media screen and(max-width: $large-desktop-breakpoint) {
+    gap: 30px;
+  }
+}
+
+.badge {
+  .MuiBadge-badge {
+    background-color: $clr6;
+  }
+}
+
+.hamburger {
+  display: none;
+  @media screen and(max-width: $small-desktop-breakpoint) {
+    display: block;
+    margin-inline-end: 20px;
+  }
+}

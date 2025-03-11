@@ -1,0 +1,59 @@
+@import "../../assets/styles/setup/setup";
+
+$room-inspiration-container-background-color: #fcf8f3;
+
+.room-inspiration-container {
+  min-height: 670px;
+  background-color: $room-inspiration-container-background-color;
+  position: relative;
+  display: flex;
+  @media screen and(max-width: 1700px) {
+    flex-direction: column;
+  }
+}
+
+.room-inspiration-text-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.room-inspiration-text {
+  max-width: 45%;
+  width: fit-content;
+  margin: auto 0;
+  @media screen and(max-width: 1700px) {
+    max-width: 100%;
+    margin-top: 40px;
+  }
+  h2 {
+    font-size: rem(40px);
+    line-height: 120%;
+    margin-bottom: 7px;
+  }
+  p {
+    line-height: 150%;
+    margin-bottom: 25px;
+  }
+}
+
+.room-inspiration-button {
+  &.MuiButtonBase-root {
+    padding: 12px 36px;
+  }
+}
+
+.room-inspiration-carousal-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  padding-block: 40px;
+  display: flex;
+  gap: 30px;
+  @media screen and(max-width: 1700px) {
+    position: relative;
+    width: 100%;
+    flex-direction: column;
+  }
+}

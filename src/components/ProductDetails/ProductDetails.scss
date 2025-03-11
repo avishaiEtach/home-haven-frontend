@@ -1,0 +1,121 @@
+@import "../../assets/styles/setup/setup";
+
+$product-details-price-color: #b0b0b0;
+$product-details-product-discount-label-discount-background-color: #e97171;
+$product-details-product-discount-label-new-background-color: #2ec1ac;
+$product-details-reviews-number-color: #9f9f9f;
+
+.product-details {
+  flex-basis: 50%;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @media screen and(max-width: $small-desktop-breakpoint) {
+    min-height: 370px;
+  }
+}
+
+.product-details-product-header-container {
+  margin-bottom: 10px;
+  h1 {
+    font-size: rem(42px);
+  }
+}
+
+.product-details-product-discount-label {
+  padding: 8px 15px;
+  color: $clr3;
+  border-radius: 5px;
+  &[data-discount="true"] {
+    background-color: $product-details-product-discount-label-discount-background-color;
+    &::after {
+      content: "-" attr(data-discount-value) "%";
+    }
+  }
+  &[data-new="true"] {
+    background-color: $product-details-product-discount-label-new-background-color;
+    &::after {
+      content: "New";
+    }
+  }
+}
+
+.product-details-price {
+  color: $product-details-price-color;
+  font-size: rem(24px);
+  &.discount {
+    text-decoration: line-through;
+  }
+}
+
+.rating-star {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+}
+
+.product-details-product-description {
+  margin-bottom: 20px;
+}
+
+.product-details-color-label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.product-details-colors-container {
+  margin-bottom: 25px;
+}
+
+.product-details-color {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: none;
+  transition: filter 0.4s;
+  cursor: pointer;
+  &:hover {
+    filter: brightness(0.7);
+  }
+  &.selected {
+    border: 3px solid $clr4;
+  }
+}
+
+.number-button-container {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  padding-inline: 8px;
+  padding-block: 10px;
+  border-radius: 10px;
+}
+
+.number-button-adjust-button {
+  &.MuiButtonBase-root {
+    padding: 0;
+    padding-block: 4px;
+    min-width: 30px;
+  }
+}
+
+.number-button-number {
+  margin-inline: 5px;
+  min-width: 25px;
+  text-align: center;
+}
+
+.product-details-reviews-number {
+  color: $product-details-reviews-number-color;
+}
+
+.product-details-reviews-divider {
+  &.MuiDivider-root {
+    height: 30px;
+  }
+}
+
+.product-details-reviews-container {
+  padding-block: 3px;
+}

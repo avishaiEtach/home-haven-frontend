@@ -1,0 +1,50 @@
+@import "../../assets/styles/setup/setup";
+
+$product-images-piker-container-background-color: #fcf8f3;
+
+.product-images-piker-main-container {
+  flex-basis: 50%;
+  min-height: 500px;
+  display: flex;
+  gap: 20px;
+  padding: 30px;
+  padding-top: 0;
+  background-color: $product-images-piker-container-background-color;
+  @media screen and(max-width: $small-desktop-breakpoint) {
+    flex-direction: column-reverse;
+    min-height: 370px;
+  }
+}
+
+.product-images-piker-container {
+  @media screen and(max-width: $small-desktop-breakpoint) {
+    flex-direction: row !important;
+    gap: 10px;
+  }
+}
+
+.product-images-piker-image-container {
+  height: 80px;
+  border-radius: 5px;
+  max-width: 100px;
+}
+
+.product-images-piker-image {
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 5px;
+  width: 100%;
+  transition: filter 0.4s;
+  cursor: pointer;
+  &:hover {
+    filter: brightness(0.7);
+  }
+  &.selected {
+    outline: 3px solid $clr4;
+  }
+}
+
+.product-images-piker-main-image-container {
+  flex: 1;
+}

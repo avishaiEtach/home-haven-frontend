@@ -1,0 +1,43 @@
+@import "../../assets/styles/setup/setup";
+
+.button {
+  &.MuiButtonBase-root {
+    &.primary {
+      background-color: $clr6;
+      box-shadow: none;
+      width: fit-content;
+      &:hover,
+      &:active {
+        background-color: $clr6;
+        box-shadow: none;
+      }
+    }
+    &.secondary {
+      background-color: $clr3;
+      box-shadow: none;
+      width: fit-content;
+      color: $clr6;
+      font-family: Poppins-SemiBold;
+      &:hover,
+      &:active {
+        background-color: $clr3;
+        box-shadow: none;
+        color: $clr6;
+      }
+    }
+    &.border {
+      background-color: $clr3;
+      box-shadow: none;
+      width: fit-content;
+      color: $clr6;
+      font-family: Poppins-SemiBold;
+      border: 1px solid $clr6;
+      &:hover,
+      &:active {
+        background-color: $clr3;
+        box-shadow: none;
+        color: $clr6;
+      }
+    }
+  }
+}

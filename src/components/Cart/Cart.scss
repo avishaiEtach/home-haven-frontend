@@ -1,0 +1,51 @@
+@import "../../assets/styles/setup/setup";
+
+.cart-main-container {
+  padding: 28px;
+  background-color: $clr3;
+  position: fixed;
+  top: 0;
+  right: 0;
+  color: $clr4;
+  min-width: 25%;
+  border-bottom-left-radius: 5px;
+  @media screen and(max-width: $mobile-breakpoint) {
+    min-width: 100%;
+  }
+}
+
+.cart-header-container {
+  margin-bottom: 20px;
+}
+
+.cart-main-header {
+  font-size: rem(24px);
+}
+
+.cart-content-container {
+  margin-top: 30px;
+  overflow: auto;
+  max-height: 400px;
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+}
+
+.cart-subtotal-container {
+  gap: 50px;
+  padding-block: 70px 25px;
+}
+
+.cart-check-out-container {
+  justify-content: flex-end;
+  padding-block: 20px 0;
+}
+
+.cart-total-price {
+  color: $clr6;
+}
+
+.cart-main-content-container {
+  display: grid;
+  grid-template-rows: auto 1fr;
+}

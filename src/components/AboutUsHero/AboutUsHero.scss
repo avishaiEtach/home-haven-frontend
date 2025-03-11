@@ -1,0 +1,136 @@
+@import "../../assets/styles/setup/setup";
+
+$about-us-hero-container-background-color: #fcf8f3;
+
+.about-us-hero-main-container {
+  min-height: 740px;
+  background-color: $about-us-hero-container-background-color;
+  margin-bottom: 70px;
+}
+
+.about-us-hero-container {
+  height: 100%;
+  padding: 20px;
+  padding-top: 30px;
+  display: flex;
+  & > * {
+    flex-basis: 50%;
+  }
+  @media screen and(max-width: $small-desktop-breakpoint) {
+    flex-direction: column;
+  }
+}
+
+.about-us-hero-text-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  padding: 30px;
+  padding-bottom: 0;
+  text-transform: capitalize;
+  display: flex;
+  flex-direction: column;
+  h1 {
+    font-family: Poppins-Bold;
+    color: $clr6;
+    font-size: rem(46px);
+    line-height: 1.25;
+    &:last-of-type {
+      margin-bottom: 17px;
+    }
+  }
+  @media screen and(max-width: $mobile-breakpoint) {
+    padding: 0;
+    margin-top: 20px;
+  }
+}
+
+.about-us-hero-text {
+  margin-bottom: 8px;
+  text-transform: lowercase;
+  &:last-of-type {
+    margin-bottom: 24px;
+  }
+}
+
+.about-us-hero-markers-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  column-gap: 30px;
+  row-gap: 15px;
+}
+
+.about-us-hero-marker {
+  align-items: center;
+  span {
+    padding-top: 3px;
+    text-transform: capitalize;
+  }
+  svg {
+    fill: $clr6;
+  }
+}
+
+.about-us-hero-numbers-container {
+  padding-top: 40px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  flex: 1;
+  p {
+    text-transform: uppercase;
+  }
+  @media screen and(max-width: $mobile-breakpoint) {
+    justify-content: space-between;
+  }
+  @media screen and(max-width: 400px) {
+    flex-direction: column;
+  }
+}
+
+.about-us-hero-number {
+  font-size: rem(40px);
+  color: $clr6;
+}
+
+.about-us-hero-carousal {
+  width: 100%;
+  max-width: 630px;
+  .slick-slider,
+  .slick-track,
+  .slick-list {
+    height: 100%;
+  }
+  .slick-slide {
+    padding-inline-end: 20px;
+    border-radius: 10px;
+    div {
+      height: 100%;
+    }
+  }
+  @media screen and(max-width: $large-desktop-breakpoint) {
+    max-width: 500px;
+  }
+  @media screen and(max-width: $small-desktop-breakpoint) {
+    .slick-slider,
+    .slick-track,
+    .slick-list {
+      min-height: 400px;
+    }
+    .slick-slide {
+      div {
+        min-height: 400px;
+      }
+    }
+  }
+}
+
+.about-us-carousal-item {
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-inline-end: 20px;
+  border-radius: 10px;
+}

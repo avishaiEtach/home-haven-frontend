@@ -1,0 +1,32 @@
+@import "../../assets/styles/setup/setup";
+
+$pagination-button-pagination-item-background-color: #f9f1e7;
+
+.pagination-container {
+  .MuiPagination-ul {
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding-block: 40px;
+  }
+}
+
+.pagination-button {
+  transition: opacity 0.4s ease !important;
+  opacity: 1;
+  &.controller {
+    text-transform: capitalize;
+  }
+  &.MuiPaginationItem-root {
+    background-color: $pagination-button-pagination-item-background-color;
+    padding: 18px;
+    &.Mui-selected {
+      background-color: $clr6;
+      color: $clr3;
+    }
+    &.Mui-disabled {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+}

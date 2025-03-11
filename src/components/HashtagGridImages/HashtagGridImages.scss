@@ -1,0 +1,94 @@
+@import "../../assets/styles/setup/setup";
+
+//https://grid.layoutit.com/?id=WRJKHEU grid link
+
+.hashtag-grid-images-grid-container {
+  display: grid;
+  min-height: 780px;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  grid-template-columns: repeat(
+    24,
+    1fr
+  ); // 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: repeat(
+    16,
+    1fr
+  ); // 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 17px 17px;
+  margin-bottom: 30px;
+  & > * {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    background-color: rgba($clr3, 0.082);
+    background-blend-mode: lighten;
+  }
+
+  @media screen and(max-width: 600px) {
+    // grid-template-columns: repeat(auto-fill, 100%);
+    // grid-template-rows: auto;
+    // & > * {
+    //   height: 290px;
+    //   grid-area: auto !important;
+    // }
+    display: flex;
+    flex-direction: column;
+    padding-inline: 20px;
+    & > * {
+      width: 100%;
+      height: 290px;
+    }
+  }
+}
+
+.div1 {
+  grid-area: 1 / 1 / 9 / 4;
+  background-image: url(../../assets/images/grid_1.png);
+}
+.div2 {
+  grid-area: 9 / 1 / 17 / 6;
+  background-image: url(../../assets/images/grid_2.png);
+}
+.div3 {
+  grid-area: 2 / 4 / 9 / 11;
+  background-image: url(../../assets/images/grid_3.png);
+}
+.div4 {
+  grid-area: 9 / 6 / 15 / 11;
+  background-image: url(../../assets/images/grid_4.png);
+}
+.div5 {
+  grid-area: 4 / 11 / 13 / 15;
+  background-image: url(../../assets/images/grid_5.png);
+}
+.div6 {
+  grid-area: 3 / 15 / 11 / 19;
+  background-image: url(../../assets/images/grid_6.png);
+}
+.div7 {
+  grid-area: 11 / 15 / 16 / 18;
+  background-image: url(../../assets/images/grid_7.png);
+}
+.div8 {
+  grid-area: 1 / 19 / 11 / 25;
+  background-image: url(../../assets/images/grid_8.png);
+}
+.div9 {
+  grid-area: 11 / 18 / 15 / 23;
+  background-image: url(../../assets/images/grid_9.png);
+}
+
+.hashtag-grid-images-text-container {
+  text-align: center;
+  p {
+    line-height: 150%;
+    font-size: rem(20px);
+  }
+  h2 {
+    line-height: 120%;
+    font-size: rem(40px);
+    margin-bottom: 24px;
+  }
+}

@@ -1,0 +1,139 @@
+@import "../../assets/styles/setup/setup";
+
+$product-comparison-product-card-container-background-color: #f9f1e7;
+$product-comparison-table-border-color: #e8e8e8;
+
+.product-comparison-product-card-main-container {
+  padding: 10px;
+}
+
+.product-comparison-product-card-container {
+  background-color: $product-comparison-product-card-container-background-color;
+  padding: 20px 10px;
+  border-radius: 10px;
+}
+
+.product-comparison-product-card-image-container {
+  width: 100px;
+  height: 160px;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+
+.product-comparison-product-card-header-container {
+  margin-bottom: 10px;
+  h1 {
+    font-size: rem(28px);
+  }
+}
+
+.product-comparison-product-card-price {
+  font-size: rem(22px);
+}
+
+.product-comparison-attribute-row-header-container {
+  padding: 25px;
+  padding-bottom: 40px;
+  h2 {
+    font-size: rem(22px);
+  }
+}
+
+.product-comparison-table {
+  margin-block: 20px;
+  // border-spacing: 30px 30px; /* 20px space between rows */
+  border-collapse: collapse;
+  width: 100%;
+  tbody > tr:nth-child(1) {
+    border-bottom: 1px solid $product-comparison-table-border-color;
+  }
+  tbody > tr:not(:first-child) > td:not(:last-child) {
+    border-right: 1px solid $product-comparison-table-border-color;
+  }
+  p {
+    max-width: 400px; /* Set a max-width for the cell if needed */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    &:hover {
+      white-space: unset;
+      overflow: auto;
+      text-overflow: unset;
+    }
+  }
+  @media screen and(max-width: $large-desktop-breakpoint) {
+    p {
+      max-width: 200px;
+    }
+    tbody > tr:not(:first-child) > td:not(:last-child) {
+      border-right: none;
+    }
+  }
+
+  @media screen and(max-width: $small-desktop-breakpoint) {
+    td {
+      display: block;
+    }
+    tr {
+      position: relative;
+      border-bottom: 1px solid $product-comparison-table-border-color;
+      &::before {
+        content: attr(data-cell);
+        font-size: rem(22px);
+        padding-left: 25px;
+        position: absolute;
+        top: 15px;
+        font-family: Poppins-Bold;
+      }
+    }
+    tbody > tr > td:nth-child(1) {
+      display: none;
+    }
+    p {
+      max-width: 300px;
+      &::before {
+        content: attr(data-cell) ":";
+        font-size: rem(16px);
+        margin-right: 10px;
+      }
+    }
+    .product-comparison-attribute-row-icon {
+      display: flex;
+      align-items: center;
+      &::before {
+        content: attr(data-cell) ":";
+        font-size: rem(16px);
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.product-comparison-table-link-container {
+  padding-inline: 50px;
+  h1 {
+    font-size: rem(32px);
+    max-width: 300px;
+    margin-bottom: 20px;
+    line-height: 1.4;
+  }
+}
+
+.product-comparison-loader-main-container {
+  margin-block: 30px;
+}
+
+.product-comparison-loader-box-container {
+  &.MuiBox-root {
+    flex: 1;
+    height: 700px;
+  }
+  .MuiSkeleton-root {
+    flex: 1;
+    &:first-of-type {
+      height: 40px;
+      flex: none;
+    }
+  }
+}

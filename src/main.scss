@@ -1,0 +1,36 @@
+// Setup
+@import "./assets/styles/setup/setup";
+
+// Basics
+@import "./assets/styles/basics/helpers";
+@import "./assets/styles/basics/layout";
+@import "./assets/styles/basics/base";
+
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+.medium {
+  font-family: Poppins-Medium;
+}
+.semi-bold {
+  font-family: Poppins-SemiBold;
+}
+.bold {
+  font-family: Poppins-Bold;
+}
+
+.items-to-compare-floating-button {
+  &.MuiButtonBase-root {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    outline: 2px solid $clr6;
+    background-color: white;
+    color: $clr6;
+    text-transform: capitalize;
+    transition: background-color 0.4s !important;
+    &:hover {
+      background-color: #e7e7e7f0;
+    }
+  }
+}

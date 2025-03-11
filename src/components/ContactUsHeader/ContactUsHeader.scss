@@ -1,0 +1,20 @@
+@import "../../assets/styles/setup/setup";
+
+$contact-us-header-p-color: #9f9f9f;
+
+.contact-us-header {
+  text-align: center;
+  margin-top: 40px;
+  h1 {
+    font-size: rem(36px);
+    margin-bottom: 10px;
+  }
+  p {
+    color: $contact-us-header-p-color;
+    margin-inline: 18%;
+    @media screen and(max-width: $tablet-breakpoint) {
+      margin-inline: 0;
+    }
+  }
+  margin-bottom: 30px;
+}

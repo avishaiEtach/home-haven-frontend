@@ -1,0 +1,32 @@
+@import "../../assets/styles/setup/setup";
+
+$product-page-tabs-container-h3-color: #9f9f9f;
+
+.product-page-tabs-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding-block: 60px 45px;
+  h3 {
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: 0.4s;
+    font-size: rem(24px);
+    color: $product-page-tabs-container-h3-color;
+    &.selected,
+    &:hover {
+      color: $clr4;
+    }
+  }
+  @media screen and(max-width: $mobile-breakpoint) {
+    gap: 30px;
+    h3 {
+      font-size: rem(18px);
+      text-align: center;
+    }
+  }
+  @media screen and(max-width: 420px) {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}

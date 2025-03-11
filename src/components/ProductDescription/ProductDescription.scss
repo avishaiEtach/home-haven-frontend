@@ -1,0 +1,35 @@
+@import "../../assets/styles/setup/setup";
+
+$product-full-description-text-container-color: #9f9f9f;
+
+.product-full-description-text-container {
+  padding-inline: 50px;
+  p {
+    margin-bottom: 20px;
+    color: $product-full-description-text-container-color;
+  }
+  @media screen and(max-width: $mobile-breakpoint) {
+    padding-inline: 0;
+  }
+}
+
+.product-full-description-images-container {
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+  &* > {
+    flex-basis: 50%;
+  }
+  img {
+    border-radius: 10px;
+    height: 400px;
+    display: block;
+  }
+  @media screen and(max-width: $mobile-breakpoint) {
+    flex-direction: column;
+    img {
+      flex-basis: 100%;
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,79 @@
+@import "../../assets/styles/setup/setup";
+
+$shop-filler-banner-main-container-background-color: #fff3e3;
+$shop-filler-banner-filter-container-divider-border-color: #9f9f9f;
+$sort-option-menu-item-color: #424242;
+
+.shop-filler-banner-main-container {
+  background-color: $shop-filler-banner-main-container-background-color;
+  padding-block: 30px;
+  margin-bottom: 40px;
+}
+
+.shop-filler-banner-container {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  @media screen and(max-width: $tablet-breakpoint) {
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.shop-filler-banner-filter-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  .MuiDivider-root {
+    border-color: $shop-filler-banner-filter-container-divider-border-color;
+  }
+}
+
+.shop-filler-banner-filter {
+  font-size: rem(20px);
+  transition: 0.4s;
+  cursor: pointer;
+  &:hover {
+    color: $clr6;
+  }
+  .MuiBadge-badge {
+    background-color: $clr6;
+    color: black !important;
+  }
+}
+
+.shop-filler-banner-short-container {
+}
+
+.shop-filler-banner-input {
+  fieldset {
+    border-color: transparent !important;
+  }
+  &:hover {
+    fieldset {
+      border-color: $clr6 !important;
+    }
+  }
+  .Mui-focused {
+    fieldset {
+      border-color: $clr6 !important;
+    }
+  }
+  background-color: $clr3;
+}
+
+.sort-option-menu-item {
+  &.MuiButtonBase-root {
+    font-weight: 700;
+    padding-top: 20px;
+    padding-bottom: 8px;
+    line-height: normal;
+    color: $sort-option-menu-item-color;
+    font-style: italic;
+    &.Mui-disabled {
+      opacity: 1;
+    }
+  }
+}

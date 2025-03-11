@@ -1,0 +1,41 @@
+@import "../../assets/styles/setup/setup";
+
+.product-additional-information-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-block: 30px;
+  label {
+    display: block;
+    font-size: rem(18px);
+    margin-bottom: 15px;
+    color: $clr6;
+    text-decoration: underline;
+  }
+  ul {
+    margin-inline-start: 20px;
+    li {
+      text-transform: capitalize;
+      span {
+        line-height: 1.8;
+        &:first-of-type {
+          margin-inline-end: 20px;
+        }
+      }
+    }
+  }
+}
+
+.product-additional-information-colors-container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.product-additional-information-color {
+  width: 50px;
+  height: 20px;
+  border: none;
+  border-radius: 5px;
+}

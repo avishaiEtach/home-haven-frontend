@@ -1,0 +1,54 @@
+@import "../../assets/styles/setup/setup";
+
+$backdrop-navbar-close-button-color: #636363;
+
+.backdrop-navbar-main-container {
+  height: 100%;
+  position: relative;
+}
+.backdrop-navbar-close-button {
+  order: 1;
+  background-color: $clr3;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  margin-top: 20px;
+  color: $backdrop-navbar-close-button-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: -70px;
+}
+
+.backdrop-navbar-container {
+  background-color: $clr3;
+  padding-block: 20px;
+  min-width: 280px;
+}
+
+.backdrop-navbar-buttons-container {
+  margin-bottom: 20px;
+}
+
+.backdrop-navbar {
+  flex-direction: column;
+  color: $clr4;
+  padding-inline-start: 18px;
+  gap: 20px;
+  li {
+    a {
+      text-decoration: none;
+      text-transform: none;
+      color: inherit;
+      &.active {
+        color: $clr6;
+      }
+    }
+  }
+}
+
+.MuiButtonBase-root.MuiButton-root.backdrop-navbar-button {
+  width: 100%;
+  justify-content: start;
+}

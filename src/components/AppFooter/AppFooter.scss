@@ -1,0 +1,114 @@
+@import "../../assets/styles/setup/setup";
+
+$footer-main-container-background-color: #1d1e27;
+$footer-divider-background-color: #b7b9cd;
+$footer-highlight-text-color: #e5ba57;
+
+.footer-main-container {
+  background-color: $footer-main-container-background-color;
+  color: $clr3;
+}
+
+.footer-divider {
+  background-color: $footer-divider-background-color;
+}
+
+.footer-top-brands-main-container {
+  padding-block: 25px;
+  @media screen and(max-width: $tablet-breakpoint) {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+.footer-top-brands-HomeHaven {
+  color: $footer-highlight-text-color;
+}
+
+.footer-logo-container {
+  display: flex;
+  column-gap: 20px;
+  flex-wrap: wrap;
+  .footer-logo-image-container {
+    width: 100px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:nth-of-type(2) {
+      width: 60px;
+      height: 60px;
+    }
+  }
+}
+
+.footer-links-main-container {
+  padding-block: 40px 20px;
+  @media screen and(max-width: $tablet-breakpoint) {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+.footer-links-main-header {
+  margin-bottom: 10px;
+  font-size: rem(20px);
+}
+
+.footer-links-semi-header {
+  margin-bottom: 4px;
+}
+.footer-links-content {
+  font-size: rem(12px);
+}
+
+.footer-link {
+  cursor: pointer;
+  transition: 0.4s;
+  a {
+    text-decoration: none;
+    text-transform: none;
+    color: inherit;
+    &.active {
+      text-decoration: underline;
+    }
+  }
+  &:hover {
+    color: $footer-highlight-text-color;
+  }
+  margin-bottom: 4px;
+}
+
+.footer-copyright-main-container {
+  padding-block: 10px;
+}
+
+.footer-copyright-logo-container {
+  width: 32px;
+  margin-inline-end: 7px;
+}
+
+.footer-copyright-logo-text {
+  font-family: Montserrat-Bold;
+  font-size: rem(32px);
+  padding-top: 10px;
+  @media screen and(max-width:$tablet-breakpoint) {
+    font-size: rem(19px);
+  }
+}
+
+.footer-copyright-text {
+  font-size: rem(12px);
+  padding-top: 20px;
+  margin-left: 8px;
+  @media screen and(max-width: $tablet-breakpoint) {
+    font-size: rem(11px);
+  }
+}
+
+.footer-copyright-icon {
+  &.MuiSvgIcon-root {
+    font-size: rem(12px);
+    margin-right: 3px;
+  }
+}
