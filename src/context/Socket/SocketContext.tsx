@@ -24,7 +24,7 @@ export const SocketContextProvider = ({
 
   const BASE_URL =
     process.env.NODE_ENV === "production"
-      ? process.env.REACT_PRODUCTION_PATH
+      ? (process.env.REACT_PRODUCTION_PATH as string)
       : "//localhost:8080";
 
   useEffect(() => {
