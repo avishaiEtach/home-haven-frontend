@@ -11,7 +11,7 @@ export const HomePage = () => {
     <div className="home-page-main-container">
       <Hero />
       <ExploreCollection />
-      <OurProducts />
+      {/* <OurProducts /> */}
       <RoomInspiration />
       <HashtagGridImages />
     </div>
