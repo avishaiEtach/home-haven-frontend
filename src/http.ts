@@ -3,7 +3,7 @@ import { routesPath } from "./routes";
 
 const BASE_URL =
   process.env.NODE_ENV === "production"
-    ? (process.env.REACT_PRODUCTION_PATH as string)
+    ? "https://home-haven-backend-9jzr.onrender.com"
     : "//localhost:8080";
 
 const axios: AxiosInstance = Axios.create({
