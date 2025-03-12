@@ -51,7 +51,9 @@ export const useProductComparison = () => {
     let productsToComparisonJsonArray = [];
     for (let i = 0; i < compare.length; i++) {
       const product = await productsServices.getProductsById(compare[i]);
-      productsToComparisonJsonArray.push(product);
+      if (product) {
+        productsToComparisonJsonArray.push(product);
+      }
     }
     setProductsToComparison(productsToComparisonJsonArray);
   };

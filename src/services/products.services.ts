@@ -1,4 +1,6 @@
+import { messages } from "../assets/constants";
 import { http } from "../http";
+import { eventBusServices } from "./error.services";
 
 interface Filter {
   originOfManufacture: string[];
@@ -18,13 +20,28 @@ async function getProducts(
   page = 1,
   limit = 16
 ): Promise<{ rows: Product[]; amount: number }> {
-  return await http.post(`/products`, { sort, filter, page, limit });
+  try {
+    return await http.post(`/products`, { sort, filter, page, limit });
+  } catch {
+    eventBusServices.eventBus.emit("error", messages.error_not_get_products);
+    return { rows: [], amount: 1 };
+  }
 }
 
-async function getProductsById(id: string): Promise<Product> {
-  return await http.get(`/getProductById/${id}`);
+async function getProductsById(id: string): Promise<Product | null> {
+  try {
+    return await http.get(`/getProductById/${id}`);
+  } catch {
+    eventBusServices.eventBus.emit("error", messages.error_not_get_product);
+    return null;
+  }
 }
 
 async function getReviewsByProductId(id: string): Promise<Review[]> {
-  return await http.get(`/getReviewsByProductId/${id}`);
+  try {
+    return await http.get(`/getReviewsByProductId/${id}`);
+  } catch {
+    eventBusServices.eventBus.emit("error", messages.error_not_get_reviews);
+    return [];
+  }
 }

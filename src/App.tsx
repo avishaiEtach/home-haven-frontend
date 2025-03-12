@@ -14,6 +14,7 @@ import { extraRoutes, routes, routesPath } from "./routes";
 import { RootState } from "./store/store";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { Page404 } from "./pages/Page404/Page404";
 
 export function App() {
   const { isBackdropOpen, closeBackdrop, backdropState } = useBackdrop();
@@ -75,6 +76,7 @@ export function App() {
               path={route.path}
             />
           ))}
+          <Route path="*" Component={Page404} />
         </Routes>
         <Zoom in={compare.length > 0} unmountOnExit>
           <Fab

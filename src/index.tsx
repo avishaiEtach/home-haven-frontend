@@ -11,25 +11,29 @@ import { BackdropProvider } from "./context/Backdrop/BackdropContext";
 import { Provider } from "react-redux";
 import { store } from "./store/store";
 import { SocketContextProvider } from "./context/Socket/SocketContext";
+import "./services/error.services";
+import { SnackbarProvider } from "notistack";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
   // <React.StrictMode>
-  <SocketContextProvider>
-    <BackdropProvider>
-      <ModalProvider>
-        <Provider store={store}>
-          <Router>
-            <ResizeObserverFix />
-            <ScrollToTop />
-            <App />
-          </Router>
-        </Provider>
-      </ModalProvider>
-    </BackdropProvider>
-  </SocketContextProvider>
+  <SnackbarProvider maxSnack={3}>
+    <SocketContextProvider>
+      <BackdropProvider>
+        <ModalProvider>
+          <Provider store={store}>
+            <Router>
+              <ResizeObserverFix />
+              <ScrollToTop />
+              <App />
+            </Router>
+          </Provider>
+        </ModalProvider>
+      </BackdropProvider>
+    </SocketContextProvider>
+  </SnackbarProvider>
   // </React.StrictMode>
 );
 

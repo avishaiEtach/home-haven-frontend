@@ -1,0 +1,18 @@
+@import "../../assets/styles/setup/setup";
+
+.page-500-main-container {
+  padding-block: 70px;
+}
+
+.page-500-header {
+  font-size: rem(42px);
+  margin-block-end: 20px;
+}
+
+.page-500-image-container {
+  height: 500px;
+  margin-block: 70px 30px;
+  img {
+    height: 100%;
+  }
+}

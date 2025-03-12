@@ -1,0 +1,24 @@
+@import "../../assets/styles/setup/setup";
+
+.page-404-main-container {
+  padding-block: 70px;
+  a {
+    transition: color 0.4s;
+    &:hover {
+      color: $clr6;
+    }
+  }
+}
+
+.page-404-header {
+  font-size: rem(42px);
+  margin-block-end: 20px;
+}
+
+.page-404-image-container {
+  height: 500px;
+  margin-block: 70px 30px;
+  img {
+    height: 100%;
+  }
+}

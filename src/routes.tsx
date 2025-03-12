@@ -1,6 +1,8 @@
 import { AboutUs } from "./pages/AboutUs/AboutUs";
 import { ContactUs } from "./pages/ContactUs/ContactUs";
 import { HomePage } from "./pages/HomePage/HomePage";
+import { Page404 } from "./pages/Page404/Page404";
+import { Page500 } from "./pages/Page500/Page500";
 import { ProductComparison } from "./pages/ProductComparison/ProductComparison";
 import { ProductPage } from "./pages/ProductPage/ProductPage";
 import { Shop } from "./pages/Shop/Shop";
@@ -12,6 +14,8 @@ export const routesPath = {
   contactUs: "/contact-us",
   productPage: "/shop/product-page/:id",
   productComparison: "/product-comparison",
+  page500: "/page-500",
+  page404: "/page-404",
 };
 
 export const routes: Routes[] = [
@@ -45,6 +49,14 @@ export const extraRoutes: Routes[] = [
   {
     path: routesPath.productComparison,
     component: ProductComparison,
+  },
+  {
+    path: routesPath.page500,
+    component: Page500,
+  },
+  {
+    path: routesPath.page404,
+    component: Page404,
   },
 ];
 

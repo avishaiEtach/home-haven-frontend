@@ -1,9 +1,10 @@
 import Axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+import { routesPath } from "./routes";
 
 const BASE_URL =
   process.env.NODE_ENV === "production"
-    ? "https://home-haven-backend-9jzr.onrender.com"
-    : "https://home-haven-backend-9jzr.onrender.com";
+    ? process.env.REACT_PRODUCTION_PATH
+    : "//localhost:8080";
 
 const axios: AxiosInstance = Axios.create({
   withCredentials: true, // This ensures that cookies are sent with each request
@@ -37,14 +38,17 @@ async function ajax(
     };
     const res: AxiosResponse<any> = await axios(config);
     return res.data;
-  } catch (err: any) {
-    console.log(
-      `Had Issues ${method}ing to the backend, endpoint: ${endpoint}, ${
-        process.env.NODE_ENV === "production"
-          ? ""
-          : `with data: ${JSON.stringify(data)}`
-      }`
-    );
-    throw err;
+  } catch (error: any) {
+    if (process.env.NODE_ENV !== "production") {
+      console.log(
+        `Had Issues ${method}ing to the backend, endpoint: ${endpoint}, ${`with data: ${JSON.stringify(
+          data
+        )}`}`
+      );
+    }
+    if (!error.response) {
+      window.location.replace(routesPath.page500);
+    }
+    throw error;
   }
 }

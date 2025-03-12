@@ -24,15 +24,15 @@ export const SocketContextProvider = ({
 
   const BASE_URL =
     process.env.NODE_ENV === "production"
-      ? "https://home-haven-backend-9jzr.onrender.com"
-      : "https://home-haven-backend-9jzr.onrender.com";
+      ? process.env.REACT_PRODUCTION_PATH
+      : "//localhost:8080";
 
   useEffect(() => {
     const newSocket = io(BASE_URL, {
       //   withCredentials: true,
       //   transports: ["websocket"],
+      reconnectionAttempts: 3,
     });
-
     newSocket.on("connect", () => {
       //   console.log("Socket connected:", newSocket.id);
     });

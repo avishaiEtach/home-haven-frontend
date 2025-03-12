@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { productsServices } from "../../../services/products.services";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { Box, Skeleton } from "@mui/material";
+import { routesPath } from "../../../routes";
 
 // const id = "670e9351666636a0c4731cf4";
 
@@ -11,6 +12,7 @@ export const useProductPage = () => {
   const [mainColor, setMainColor] = useState<string | null>(null);
   const [reviews, setReviews] = useState<Review[]>([]);
   const [relatedProducts, setRelatedProducts] = useState<Product[]>([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (id) {
@@ -20,14 +22,18 @@ export const useProductPage = () => {
 
   const gerProductById = async (id: string) => {
     const product = await productsServices.getProductsById(id);
-    const reviews = await productsServices.getReviewsByProductId(product._id);
-    const relatedProducts = await productsServices.getProducts({}, {}, 1, 4);
-    console.log("product", product);
-
-    setProduct(product);
-    setMainColor(product.productDetails.colors[0]);
-    setReviews(reviews);
-    setRelatedProducts(relatedProducts.rows);
+    if (product) {
+      const reviews = await productsServices.getReviewsByProductId(product._id);
+      const relatedProducts = await productsServices.getProducts({}, {}, 1, 4);
+      setProduct(product);
+      setMainColor(product.productDetails.colors[0]);
+      setReviews(reviews);
+      setRelatedProducts(relatedProducts.rows);
+    } else {
+      setTimeout(() => {
+        navigate(routesPath.page404, { replace: true });
+      }, 3000);
+    }
   };
 
   const ProductLoader = () => {

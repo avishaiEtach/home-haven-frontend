@@ -23,10 +23,6 @@ import home_office1 from "../assets/images/home_office_1.png";
 import home_office2 from "../assets/images/home_office_2.png";
 import home_office3 from "../assets/images/home_office_3.png";
 import home_office4 from "../assets/images/home_office_4.png";
-import room2 from "../assets/images/room2.png";
-import room3 from "../assets/images/room3.png";
-import room4 from "../assets/images/room4.png";
-import room5 from "../assets/images/room5.png";
 import room1_1 from "../assets/images/room1_1.png";
 import room1_2 from "../assets/images/room1_2.png";
 import room1_3 from "../assets/images/room1_3.png";
@@ -42,8 +38,8 @@ import dining from "../assets/images/dining.jpg";
 import living from "../assets/images/living.jpg";
 import bedroom from "../assets/images/bedroom.jpg";
 
-import bbb from "../assets/images/businessMan1.png";
-import aaa from "../assets/images/aaa.png";
+import member1 from "../assets/images/businessMan1.png";
+import member2 from "../assets/images/aaa.png";
 import {
   Dimensions,
   General,
@@ -481,12 +477,12 @@ const team_members = [
   {
     jobTitle: "Founder",
     name: "John Leno",
-    image: bbb,
+    image: member1,
   },
   {
     jobTitle: "E-Commerce Manager",
     name: "Saar Kaya",
-    image: aaa,
+    image: member2,
   },
   {
     jobTitle: "Product Curator",
@@ -635,6 +631,12 @@ const cards = [
   },
 ];
 
+const messages = {
+  error_not_get_products: "Unable to fetch the products",
+  error_not_get_product: "Unable to fetch the product",
+  error_not_get_reviews: "Unable to fetch the reviews",
+};
+
 export {
   products,
   rooms,
@@ -658,4 +660,5 @@ export {
   dimensions,
   warranty,
   cards,
+  messages,
 };
