@@ -51,10 +51,10 @@ export function changeCartItemCount(
   };
 }
 
-export function deleteCartItem(productId: string, cart: any): any {
+export function deleteCartItem(productId: string, oldCart: any): any {
   return async (dispatch: any) => {
-    delete cart[productId];
-    dispatch({ type: "ADD_To_CART", cart });
+    delete oldCart[productId];
+    dispatch({ type: "ADD_To_CART", cart: { ...oldCart } });
   };
 }
 
@@ -77,16 +77,16 @@ export function setCart(cart: any): any {
 
 export function addToFavorite(
   product: Product,
-  favorite: any,
+  oldFavorite: any,
   status: boolean
 ): any {
   return async (dispatch: any) => {
-    if (!favorite[product._id] && status) {
-      favorite = { ...favorite, [product._id]: product };
-    } else if (favorite[product._id] && !status) {
-      delete favorite[product._id];
+    if (!oldFavorite[product._id] && status) {
+      oldFavorite = { ...oldFavorite, [product._id]: product };
+    } else if (oldFavorite[product._id] && !status) {
+      delete oldFavorite[product._id];
     }
-    dispatch({ type: "ADD_To_FAVORITE", favorite });
+    dispatch({ type: "ADD_To_FAVORITE", favorite: { ...oldFavorite } });
   };
 }
 

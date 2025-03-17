@@ -40,9 +40,11 @@ export function App() {
     });
 
     socket.on("get-token-info", (tokenInfo: TokenInfo) => {
-      dispatch(setCart(tokenInfo.cart));
-      dispatch(setFavorite(tokenInfo.favorite));
-      dispatch(setCompare(tokenInfo.compare));
+      if (tokenInfo) {
+        dispatch(setCart(tokenInfo.cart));
+        dispatch(setFavorite(tokenInfo.favorite));
+        dispatch(setCompare(tokenInfo.compare));
+      }
     });
 
     return () => {
