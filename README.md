@@ -6,7 +6,7 @@ Check here: [HomeHaven Live](https://homehaven-2ysw.onrender.com)
 
 backend repository : [HomeHaven Backend](https://home-haven-backend-9jzr.onrender.com)
 
-https://github.com/user-attachments/assets/98a8b5e6-fe6d-4582-97b2-90ac4e561741
+https://github.com/user-attachments/assets/56903307-c90d-473a-9c63-bfaa665fa47e
 
 ## Features
 
