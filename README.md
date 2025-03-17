@@ -4,7 +4,7 @@ A fully functional e-commerce platform built with the MERN stack (MongoDB, Expre
 
 Check here: [HomeHaven Live](https://homehaven-2ysw.onrender.com)
 
-backend repository : [HomeHaven Backend](https://home-haven-backend-9jzr.onrender.com)
+backend repository : [HomeHaven Backend](https://github.com/avishaiEtach/home-haven-backend)
 
 https://github.com/user-attachments/assets/56903307-c90d-473a-9c63-bfaa665fa47e
 
