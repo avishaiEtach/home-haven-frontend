@@ -1,28 +1,18 @@
-# MERN Live Chat Application
+# HomeHaven – E-commerce Platform for Home Design
 
-A fully functional live chat application built with the MERN stack (MongoDB, Express, React, Node.js) and Socket.io. This application allows users to sign up, log in, and engage in real-time conversations. The app supports multiple chat conversations, displays online users, and provides seamless live chat functionality.
+A fully functional e-commerce platform built with the MERN stack (MongoDB, Express, React, Node.js). HomeHaven offers a wide variety of home products including sofas, beds, chairs, and more, with a focus on home design. Users can browse, filter, and purchase products, leaving reviews and managing their shopping cart.
 
-Check here: [https://live-chat.onrender.com/](https://live-chat-4ydd.onrender.com/)
+Check here: [HomeHaven Live](https://homehaven-2ysw.onrender.com)
 
-backend repository : [Live Chat Backend](https://github.com/avishaiEtach/Live_Chat_backend)
+backend repository : [HomeHaven Backend](https://home-haven-backend-9jzr.onrender.com)
 
 https://github.com/user-attachments/assets/98a8b5e6-fe6d-4582-97b2-90ac4e561741
 
-## Demi-Users
-
-You can use the demi-admin user or to signup to the app
-
-**demi-admin user**:
-
-        username: admin@gmail.com,
-        password: 123456789,
-
 ## Features
 
-- **User Authentication**: Sign up and log in functionality to manage users.
-- **Conversations**: Users can select conversations from a list and engage in messaging.
-- **Real-time Messaging**: Messages are updated in real-time with the help of Socket.io.
-- **Online Status**: Shows online users in real-time.
+- **Product Catalog**: Browse and filter a variety of home products such as sofas, chairs, and beds.
+- **Product Reviews**: Users can leave reviews on products they have purchased.
+- **Shopping Cart**: A dynamic cart that allows users to add, remove, and purchase items.
 - **Responsive Design**: The app is styled using SCSS for a clean and modern interface.
 
 ## Tech Stack
@@ -30,8 +20,8 @@ You can use the demi-admin user or to signup to the app
 - **Frontend**: React, SCSS
 - **Backend**: Node.js, Express
 - **Database**: MongoDB
-- **Real-Time Communication**: Socket.io
 - **Authentication**: JSON Web Token (JWT)
+- **Real-Time Communication**: Socket.io
 
 ## Available Scripts
 
